@@ -1,6 +1,6 @@
 {
   "name": "supper-tools",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "常用的工具函数",
   "main": "index.js",
   "scripts": {
