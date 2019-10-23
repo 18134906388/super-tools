@@ -112,14 +112,15 @@ var dateStrForma = function dateStrForma(str, from, to){
  * 一键copy
  */
 var copyByOneKey = function copyByOneKey(text, callback) {
-  let oInput = document.createElement('input');
-  oInput.value = text;
+  let temptext = text.replace('↵',"\n")
+  let oInput = document.createElement('textarea');
+  oInput.value = temptext;
   document.body.appendChild(oInput);
   oInput.select(); // 选择对象
   document.execCommand("Copy"); // 执行浏览器复制命令
   oInput.className = 'oInput';
   oInput.style.display='none';
-  callback();
+  callback && callback();
 }
 
 module.exports = {
